@@ -14,7 +14,7 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <a href="/.auth/login/google">Login</a>
+        <a href="/.auth/login/aad?post_login_redirect_uri=/dashboard">Login</a>
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
