@@ -1,7 +1,17 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
+async function getUserInfo() {
+  const response = await fetch('/.auth/me');
+  const payload = await response.json();
+  const { clientPrincipal } = payload;
+  return clientPrincipal;
+}
+
 export default function Dashboard() {
+  let identity;
+  getUserInfo().then(i => identity = i);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,6 +23,9 @@ export default function Dashboard() {
         <h1 className={styles.title}>
             Dashboard
         </h1>
+        <p>
+          {JSON.stringify(identity)}
+        </p>
 
         
       </main>
