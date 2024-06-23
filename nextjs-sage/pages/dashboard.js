@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import { useState } from 'react';
 
 async function getUserInfo() {
   const response = await fetch('/.auth/me');
@@ -9,10 +10,10 @@ async function getUserInfo() {
 }
 
 export default function Dashboard() {
-  let identity;
+  const [identity, setIdentity] = useState("");
   getUserInfo().then(i => {
     console.log(i)
-    identity = i.userDetails});
+    setIdentity(i.userDetails)});
 console.log(identity)
   return (
     <div className={styles.container}>
@@ -26,7 +27,7 @@ console.log(identity)
             Dashboard
         </h1>
         <p>
-          {JSON.stringify(identity)}
+          {identity}
         </p>
 
         
