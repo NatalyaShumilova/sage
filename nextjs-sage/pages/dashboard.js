@@ -10,8 +10,10 @@ async function getUserInfo() {
 
 export default function Dashboard() {
   let identity;
-  getUserInfo().then(i => identity = i);
-
+  getUserInfo().then(i => {
+    console.log(i)
+    identity = i.userDetails});
+console.log(identity)
   return (
     <div className={styles.container}>
       <Head>
