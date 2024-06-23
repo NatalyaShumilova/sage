@@ -13,7 +13,7 @@ export default function Dashboard() {
   const [identity, setIdentity] = useState("");
   getUserInfo().then(i => {
     console.log(i)
-    setIdentity(i.userDetails)});
+    setIdentity(i?.userDetails)});
 console.log(identity)
   return (
     <div className={styles.container}>
