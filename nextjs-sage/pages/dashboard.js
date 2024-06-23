@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css';
 import { useState } from 'react';
 
 async function getUserInfo() {
-  const response = await fetch('/.auth/me');
+  const response = await fetch('https://ashy-dune-0d20e0d00.5.azurestaticapps.net/.auth/me');
   const payload = await response.json();
   const { clientPrincipal } = payload;
   return clientPrincipal;
