@@ -1,6 +1,18 @@
 import type { NextRequest } from 'next/server'
  
 export function middleware(request: NextRequest) {
-    
+    console.log(request.cookies)
+  const currentUser = request.cookies.get('currentUser')?.value
+  if (request.nextUrl.pathname.startsWith('/.auth')) {
+    return Response.redirect(request.url)
+  }
+ 
+  if (currentUser && !request.nextUrl.pathname.startsWith('/dashboard')) {
+    return Response.redirect(new URL('/dashboard', request.url))
+  }
+ 
+  if (!currentUser && request.nextUrl.pathname !== '/') {
+    return Response.redirect(new URL('/login', request.url))
+  }
 }
  
