@@ -5,7 +5,7 @@ export function middleware(request: NextRequest) {
   const currentUser = request.cookies.get('currentUser')?.value
 
   if (!currentUser) {
-    return Response.redirect(new URL('/login', request.url))
+    return;
   }
 }
  
