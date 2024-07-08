@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 import { useState } from 'react';
 
 async function getUserInfo() {
@@ -16,14 +15,14 @@ export default function Dashboard() {
     setIdentity(i?.userDetails)});
 console.log(identity)
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className={styles.title}>
+        <h1>
             Dashboard
         </h1>
         <p>
