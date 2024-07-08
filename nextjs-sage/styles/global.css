@@ -1,26 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif;
+  background: linear-gradient(-35deg, #ffffff00, #ffffff33), linear-gradient(-70deg, #DCECDB80, #ffffff00), linear-gradient(-40deg, #F0DEFA80, #ffffff00), linear-gradient(-15deg, #F8F7F5, #ffffff);
+  font-family: "Open Sans", sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body > div {
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
+
+h1 {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #89BF8F;
+  text-align: center;
+  font-size: 48px;
+}
+
+a, button {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #443D33;
+  box-shadow: 1px 4px 8px 0 #89BF8F33;
+}
+
 
 * {
   box-sizing: border-box;
