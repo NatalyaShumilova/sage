@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import FloatingBox from '../components/FloatingBox'
+import {FloatingBox} from '../components/FloatingBox'
 
 async function getUserInfo() {
   const response = await fetch('https://ashy-dune-0d20e0d00.5.azurestaticapps.net/.auth/me');
