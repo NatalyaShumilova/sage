@@ -13,7 +13,7 @@ export default function Dashboard() {
   const [identity, setIdentity] = useState("");
   getUserInfo().then(i => {
     console.log(i)
-    setIdentity(i?.userDetails)});
+    setIdentity(i)});
 console.log(identity)
   return (
     <div>
@@ -27,9 +27,9 @@ console.log(identity)
             Dashboard
         </h1>
         <p>
-          {identity}
+          {identity.userDetails}
         </p>
-        <FloatingBox>Alert</FloatingBox>
+        <FloatingBox>{identity.userId}</FloatingBox>
 
         
       </main>
