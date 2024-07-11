@@ -30,11 +30,11 @@ h1 {
 
 a, button {
   background-color: theme.$light;
-  border-radius: 5px;
+  border-radius: theme.$radius;
   padding: 10px 20px;
   text-decoration: none;
   color: theme.$dark;
-  box-shadow: 1px 4px 8px 0 #89BF8F33;
+  box-shadow: theme.$shadow;
 }
 
 
