@@ -2,3 +2,9 @@
 $light: #fff;
 $dark: #443D33;
 $green: #89BF8F;
+
+:export {
+    light: $light;
+    dark: $dark;
+    green: $green;
+}
