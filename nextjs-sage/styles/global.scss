@@ -1,4 +1,4 @@
-@use 'theme.scss';
+@use 'theme';
 
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
@@ -7,7 +7,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(-35deg, #ffffff00, #ffffff33), linear-gradient(-70deg, #DCECDB80, #ffffff00), linear-gradient(-40deg, #F0DEFA80, #ffffff00), linear-gradient(-15deg, #F8F7F5, $light);
+  background: linear-gradient(-35deg, #ffffff00, #ffffff33), linear-gradient(-70deg, #DCECDB80, #ffffff00), linear-gradient(-40deg, #F0DEFA80, #ffffff00), linear-gradient(-15deg, #F8F7F5, theme.$light);
   font-family: "Open Sans", sans-serif;
 }
 
@@ -23,17 +23,17 @@ h1 {
   font-family: "Indie Flower", cursive;
   font-weight: 400;
   font-style: normal;
-  color: $green;
+  color: theme.$green;
   text-align: center;
   font-size: 48px;
 }
 
 a, button {
-  background-color: white;
+  background-color: theme.$light;
   border-radius: 5px;
   padding: 10px 20px;
   text-decoration: none;
-  color: $dark;
+  color: theme.$dark;
   box-shadow: 1px 4px 8px 0 #89BF8F33;
 }
 
