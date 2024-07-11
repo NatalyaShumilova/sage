@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react"
 import styled from "styled-components"
+import theme from '../styles/global.scss'
 
 const StyledDiv = styled.div`
     background: #ffffff; 
@@ -9,6 +10,7 @@ const StyledDiv = styled.div`
     `;
 
 export const FloatingBox: React.FC<{children: ReactNode}> = ({children}) => {
+    console.log(theme)
     return (
         <StyledDiv>
             {children}
