@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react"
 import styled from "styled-components"
-import theme from '../styles/global.scss'
+import theme from '../styles/theme.scss'
+
 
 const StyledDiv = styled.div`
     background: #ffffff; 

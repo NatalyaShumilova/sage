@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-$light: #fff;
-$dark: #443D33;
-$green: #89BF8F;
+@use 'theme.scss';
 
 
 html,
