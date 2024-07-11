@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {FloatingBox} from '../components/FloatingBox'
 
 async function getUserInfo() {
@@ -11,9 +11,12 @@ async function getUserInfo() {
 
 export default function Dashboard() {
   const [identity, setIdentity] = useState("");
-  getUserInfo().then(i => {
-    console.log(i)
-    setIdentity(i)});
+
+  useEffect(() => {
+    getUserInfo().then(i => {
+      setIdentity(i)});
+  }, [])
+ 
 console.log(identity)
   return (
     <div>
