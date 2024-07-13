@@ -6,12 +6,16 @@ import theme from '../styles/theme.module.scss'
 const NavContainer = styled.div`
     display: flex;
     flex-direction: row;
+    width: 100%;
 `;
 const NavIndicator = styled.div.attrs<{$current: boolean, $home: boolean}>(props => props)`
     width: ${props => props.$current ? "6px" : "4px"};
     height: ${props => props.$current ? "6px" : "4px"};
     border-radius: 3px;
-    background: ${theme.purple};
+    ${props => "background: " + theme.purple + props.$current ? "" : "bf"};
+    color: ${props => theme.purple + props.$current ? "" : "bf"};
+    margin: 6px;
+    ${props => props.$home && "background-image: url(../public/HomeIcon.svg)"}
 
 `;
 
