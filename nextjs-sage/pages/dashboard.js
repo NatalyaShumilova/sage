@@ -37,7 +37,7 @@ export default function Dashboard() {
       <main>
         {screens[current](identity)}
        
-        <Navigation screens={screens} current={current} setCurrent={setCurrent} />
+        <Navigation screens={Object.keys(screens)} current={current} setCurrent={setCurrent} />
       </main>
     </div>
   );
