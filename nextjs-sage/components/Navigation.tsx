@@ -13,7 +13,7 @@ const NavIndicator = styled.div.attrs<{$current: boolean, $home: boolean}>(props
     height: ${props => props.$current ? "6px" : "4px"};
     border-radius: 3px;
     background-color: ${props => theme.$purple};
-    color: ${props => theme.$purple + props.$current};
+    color: ${theme.$purple};
     margin: 6px;
     ${props => props.$home && "background-image: url(HomeIcon.svg); background-size: contain;"}
 
@@ -25,9 +25,11 @@ export const Navigation = () => {
     const [current, setCurrent] = useState("Dashboard");
 
     return (
-        <NavContainer>
-            {screens.map(s => <NavIndicator onClick={() => setCurrent(s)} $current={s === current} $home={s === "Dashboard"} />)}
+        <>
+            <NavContainer>
+                {screens.map(s => <NavIndicator onClick={() => setCurrent(s)} $current={s === current} $home={s === "Dashboard"} />)}
+            </NavContainer>
             {current}
-        </NavContainer>
+        </>
     )
 }
