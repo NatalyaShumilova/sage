@@ -21,8 +21,8 @@ const NavIndicator = styled.div.attrs<{$current: boolean, $home: boolean}>(props
     width: ${props => props.$home ? "14px" : "7px"};
     height: ${props => props.$home ? "14px" : "7px"};
     margin: 8px;
-    ${props => !props.$home && "border-radius: 6px; background-color: " + theme.purple + props.$current ? "" : "B5"};
-    ${props => props.$home && "background-image: url(HomeIcon.svg); background-size: contain; color: " + theme.purple + props.$current ? "" : "B5"}
+    ${props => !props.$home && "border-radius: 6px; background-color: " + theme.purple + (props.$current ? "" : "B5")};
+    ${props => props.$home && "background-image: url(HomeIcon.svg); background-size: contain; color: " + theme.purple + (props.$current ? "" : "B5")}
 
 
 `;
