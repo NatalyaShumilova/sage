@@ -9,11 +9,11 @@ const NavContainer = styled.div`
     width: 100%;
 `;
 const NavIndicator = styled.div.attrs<{$current: boolean, $home: boolean}>(props => props)`
-    width: ${props => props.$current ? "6px" : "4px"};
-    height: ${props => props.$current ? "6px" : "4px"};
-    border-radius: 3px;
+    width: ${props => props.$current ? "12px" : "8px"};
+    height: ${props => props.$current ? "12px" : "8px"};
+    border-radius: 6px;
     color: ${theme.purple};
-    margin: 6px;
+    margin: 8px;
     ${props => !props.$home && "background-color: " + theme.purple};
     ${props => props.$home && "background-image: url(HomeIcon.svg); background-size: contain;"}
 
