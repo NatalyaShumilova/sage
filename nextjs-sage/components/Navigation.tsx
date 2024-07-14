@@ -7,17 +7,21 @@ const NavContainer = styled.div`
     & > div {
         display: flex;
         flex-direction: row;
+        justify-content: center;
     };
     color: ${theme.purple};
     width: 100%;
     font-size: 16px;
+    text-align: center;
+    position: absolute:
+    bottom: 10px;
+    left: 0;
 `;
 const NavIndicator = styled.div.attrs<{$current: boolean, $home: boolean}>(props => props)`
     width: ${props => props.$current ? "12px" : "8px"};
     height: ${props => props.$current ? "12px" : "8px"};
-    border-radius: 6px;
     margin: 8px;
-    ${props => !props.$home && "background-color: " + theme.purple};
+    ${props => !props.$home && "border-radius: 6px; background-color: " + theme.purple};
     ${props => props.$home && "background-image: url(HomeIcon.svg); background-size: contain;"}
 
 
