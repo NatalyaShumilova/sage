@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import {FloatingBox} from '../components/FloatingBox'
 import {Navigation} from '../components/Navigation'
 
 const screens = {

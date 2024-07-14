@@ -4,8 +4,8 @@ import theme from '../styles/theme.module.scss'
  
 
 const NavContainer = styled.div`
-    display: flex;
     & > div {
+        display: flex;
         flex-direction: row;
     };
     color: ${theme.purple};
