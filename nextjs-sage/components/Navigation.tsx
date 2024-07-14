@@ -13,7 +13,7 @@ const NavContainer = styled.div`
     width: 100%;
     font-size: 16px;
     text-align: center;
-    position: absolute:
+    position: absolute;
     bottom: 10px;
     left: 0;
 `;
