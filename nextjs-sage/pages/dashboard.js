@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import {Navigation} from '../components/Navigation'
+import {Navigation} from '../components/Navigation';
+import {Home} from '../components/Home';
+import {Diet} from '../components/Diet';
+import {Nutrition} from '../components/Nutrition';
 
 const screens = {
   Home: (identity) => <Home identity={identity}/>,
