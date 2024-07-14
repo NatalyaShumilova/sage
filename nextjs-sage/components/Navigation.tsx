@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import theme from '../styles/theme.module.scss'
  
@@ -23,16 +23,19 @@ const NavIndicator = styled.div.attrs<{$current: boolean, $home: boolean}>(props
 
 `;
 
-const screens = ["Dashboard", "My Diet", "My Nutrition"]
 
-export const Navigation = () => {
-    const [current, setCurrent] = useState("Dashboard");
+interface NavigationProps {
+    current: string;
+    setCurrent: (c: string) => void;
+    screens: string[];
+}
+export const Navigation: React.FC<NavigationProps> = ({current, setCurrent, screens}) => {
 
     return (
         <>
             <NavContainer>
                 <div>
-                    	{screens.map(s => <NavIndicator onClick={() => setCurrent(s)} $current={s === current} $home={s === "Dashboard"} />)}
+                    	{screens.map(s => <NavIndicator onClick={() => setCurrent(s)} $current={s === current} $home={s === "Home"} />)}
                 </div>
                 {current}
             </NavContainer>
