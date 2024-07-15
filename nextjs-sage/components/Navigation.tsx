@@ -39,9 +39,9 @@ export const Navigation: React.FC<NavigationProps> = ({current, setCurrent, scre
         <>
             <NavContainer>
                 <div>
-                    <NavIndicator onClick={() => setCurrent(screens[index-1])} $home={screens[index-1] === "Home"} />
+                    <NavIndicator onClick={() => setCurrent(screens[(index+2)%3])} $home={screens[(index+2)%3] === "Home"} />
                     <NavIndicator $current  $home={current === "Home"} />
-                    <NavIndicator onClick={() => setCurrent(screens[index+1])} $home={screens[index+1] === "Home"} />
+                    <NavIndicator onClick={() => setCurrent(screens[(index+1)%3])} $home={screens[(index+1)%3] === "Home"} />
 
                     	{/*screens.map(s => <NavIndicator onClick={() => setCurrent(s)} $current={s === current} $home={s === "Home"} />)*/}
                 </div>
