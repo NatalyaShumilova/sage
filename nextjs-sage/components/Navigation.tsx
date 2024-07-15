@@ -17,7 +17,7 @@ const NavContainer = styled.div`
     bottom: 10px;
     left: 0;
 `;
-const NavIndicator = styled.div.attrs<{$current: boolean, $home: boolean}>(props => props)`
+const NavIndicator = styled.div.attrs<{$current?: boolean, $home: boolean}>(props => props)`
     width: ${props => props.$home ? "14px" : "7px"};
     height: ${props => props.$home ? "14px" : "7px"};
     margin: 8px;
@@ -34,12 +34,16 @@ interface NavigationProps {
     screens: string[];
 }
 export const Navigation: React.FC<NavigationProps> = ({current, setCurrent, screens}) => {
-
+    const index = screens.indexOf(current);
     return (
         <>
             <NavContainer>
                 <div>
-                    	{screens.map(s => <NavIndicator onClick={() => setCurrent(s)} $current={s === current} $home={s === "Home"} />)}
+                    <NavIndicator onClick={() => setCurrent(screens[index-1])} $home={screens[index-1] === "Home"} />
+                    <NavIndicator $current  $home={current === "Home"} />
+                    <NavIndicator onClick={() => setCurrent(screens[index+1])} $home={screens[index+1] === "Home"} />
+
+                    	{/*screens.map(s => <NavIndicator onClick={() => setCurrent(s)} $current={s === current} $home={s === "Home"} />)*/}
                 </div>
                 {current}
             </NavContainer>
