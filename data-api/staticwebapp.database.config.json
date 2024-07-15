@@ -39,15 +39,17 @@
       "source": "dbo.v_user",
       "permissions": [
         {
-          "actions": ["read"],
           "role": "authenticated",
-          "fields": {
-            "include": [ "name" ],
-            "exclude": [ "provider", "provider_key" ]
-          },
-          "policy": {
-            "database": "@item.provider eq @claims.identityProvider and @item.provider_key eq @claims.userId"
-          }
+          "actions": [{
+            "action": "read",
+            "fields": {
+              "include": [ "name" ],
+              "exclude": [ "provider", "provider_key" ]
+            },
+            "policy": {
+              "database": "@item.provider eq @claims.identityProvider and @item.provider_key eq @claims.userId"
+            }
+          }]
         }
       ]
     }
