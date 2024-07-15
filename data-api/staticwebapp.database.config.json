@@ -28,12 +28,6 @@
       }
     }
   },
-  "telemetry": {
-    "application-insights": {
-      "connection-string": "@env('APPLICATIONINSIGHTS_CONNECTION_STRING')",
-      "enabled": true
-    }
-  },
   "entities": {
     "User": {
       "source": "dbo.v_user",
