@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import theme from '../styles/theme.module.scss'
-import HomeIcon from '../public/HomeIcon.svg'
+import { HomeIcon} from './HomeIcon'
  
 
 const NavContainer = styled.div`
@@ -40,11 +40,9 @@ export const Navigation: React.FC<NavigationProps> = ({current, setCurrent, scre
         <>
             <NavContainer>
                 <div>
-                    <NavIndicator onClick={() => setCurrent(screens[(index+2)%3])} $home={screens[(index+2)%3] === "Home"}><HomeIcon/></NavIndicator>
-                    <NavIndicator $current  $home={current === "Home"} />
-                    <NavIndicator onClick={() => setCurrent(screens[(index+1)%3])} $home={screens[(index+1)%3] === "Home"} />
-
-                    	{/*screens.map(s => <NavIndicator onClick={() => setCurrent(s)} $current={s === current} $home={s === "Home"} />)*/}
+                    <NavIndicator onClick={() => setCurrent(screens[(index+2)%3])} $home={screens[(index+2)%3] === "Home"}>{screens[(index+2)%3] === "Home" && <HomeIcon color={theme.purple + "B5"}/>}</NavIndicator>
+                    <NavIndicator $current  $home={current === "Home"}>{current === "Home" && <HomeIcon color={theme.purple}/>}</NavIndicator>
+                    <NavIndicator onClick={() => setCurrent(screens[(index+1)%3])} $home={screens[(index+1)%3] === "Home"}>{screens[(index+1)%3] === "Home" && <HomeIcon color={theme.purple + "B5"}/>}</NavIndicator>
                 </div>
                 {current}
             </NavContainer>
