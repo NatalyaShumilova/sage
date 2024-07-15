@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import theme from '../styles/theme.module.scss'
+import HomeIcon from '../public/HomeIcon.svg'
  
 
 const NavContainer = styled.div`
@@ -22,7 +23,7 @@ const NavIndicator = styled.div.attrs<{$current?: boolean, $home: boolean}>(prop
     height: ${props => props.$home ? "14px" : "7px"};
     margin: 8px;
     ${props => !props.$home && "border-radius: 6px; background-color: " + theme.purple + (props.$current ? "" : "B5")};
-    ${props => props.$home && "background-image: url(HomeIcon.svg); background-size: contain; color: " + theme.purple + (props.$current ? "" : "B5")}
+    ${props => props.$home && "color: " + theme.purple + (props.$current ? "" : "B5")}
 
 
 `;
@@ -39,7 +40,7 @@ export const Navigation: React.FC<NavigationProps> = ({current, setCurrent, scre
         <>
             <NavContainer>
                 <div>
-                    <NavIndicator onClick={() => setCurrent(screens[(index+2)%3])} $home={screens[(index+2)%3] === "Home"} />
+                    <NavIndicator onClick={() => setCurrent(screens[(index+2)%3])} $home={screens[(index+2)%3] === "Home"}><HomeIcon/></NavIndicator>
                     <NavIndicator $current  $home={current === "Home"} />
                     <NavIndicator onClick={() => setCurrent(screens[(index+1)%3])} $home={screens[(index+1)%3] === "Home"} />
 
