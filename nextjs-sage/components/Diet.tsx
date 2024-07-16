@@ -14,6 +14,8 @@ export const Diet: React.FC<DietProps> = ({identity}) => {
         <FloatingBox>
             <h2>Meat</h2>
             <Food food={{Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2}} />
+            <Food food={{Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2}} />
+
         </FloatingBox>
         </div>
     )
