@@ -15,6 +15,7 @@ const ImageContainer = styled.div.attrs<{$image: string}>(props => props)`
         margin: auto;
     };
     & p {
+        margin: 3px;
         font-size: 12px;
         font-weight: lighter;
         text-align: center;
