@@ -1,4 +1,5 @@
 import { FloatingBox } from "./FloatingBox";
+import { Food } from "./Food";
 
 interface DietProps {
     identity: any;
@@ -10,10 +11,10 @@ export const Diet: React.FC<DietProps> = ({identity}) => {
             <h1>
                 My Diet
             </h1>
-            <p>
-                {identity.userDetails}
-            </p>
-        <FloatingBox>{identity.userId}</FloatingBox>
+        <FloatingBox>
+            <h2>Meat</h2>
+            <Food food={{Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2}} />
+        </FloatingBox>
         </div>
     )
 }
