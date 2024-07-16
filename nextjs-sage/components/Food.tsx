@@ -8,7 +8,12 @@ const ImageContainer = styled.div.attrs<{$image: string}>(props => props)`
     width: 60px;
     height: 60px;
     background-image: url(${props => props.$image});
-    background-size: fill;
+    background-size: cover;
+`
+
+const Label = styled.p`
+    font-size: 12px;
+    font-weight: light;
 `
 
 interface FoodProps {
@@ -25,8 +30,8 @@ export const Food: React.FC<FoodProps> = ({food}) => {
     return(
         <div>
             <ImageContainer $image={food.Icon}/>
-            {food.Name}
-            {food.ServingSize * food.ServingsPerCycle}g
+            <Label>{food.Name}</Label>
+            <Label>{food.ServingSize * food.ServingsPerCycle}g</Label>
         </div>
     )
 }
