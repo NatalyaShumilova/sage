@@ -21,7 +21,8 @@ const NavContainer = styled.div`
 const NavIndicator = styled.div.attrs<{$current?: boolean, $home: boolean}>(props => props)`
     width: ${props => props.$home ? "14px" : "7px"};
     height: ${props => props.$home ? "15px" : "7px"};
-    ${props => !props.$home && "border-radius: 6px; margin: 8px; background-color: " + theme.purple + (props.$current ? "" : "B5")};
+    margin: ${props => props.$home ? 0 : 8}px 8px;
+    ${props => !props.$home && "border-radius: 6px; background-color: " + theme.purple + (props.$current ? "" : "B5")};
     ${props => props.$home && "color: " + theme.purple + (props.$current ? "" : "B5")}
 
 
