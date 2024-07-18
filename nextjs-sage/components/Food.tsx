@@ -1,4 +1,4 @@
-import '../styles/food.module.scss'
+import styles from '../styles/food.module.scss'
 
 interface FoodProps {
     food: {
@@ -12,7 +12,7 @@ interface FoodProps {
 export const Food: React.FC<FoodProps> = ({food}) => {
 
     return(
-        <div className="food" style={{backgroundImage: `url(${food.Icon})`}}>
+        <div className={styles.food} style={{backgroundImage: `url(${food.Icon})`}}>
             <div/>
             <p>{food.Name}</p>
             <p>{food.ServingSize * food.ServingsPerCycle}g</p>
