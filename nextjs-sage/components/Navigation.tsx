@@ -1,32 +1,7 @@
 import React from "react"
-import styled from "styled-components"
+import '../styles/navigation.module.scss'
 import theme from '../styles/theme.module.scss'
 import { HomeIcon} from './HomeIcon'
- 
-
-const NavContainer = styled.div`
-    & > div {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    };
-    color: ${theme.purple};
-    width: 100%;
-    font-size: 16px;
-    text-align: center;
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-`;
-const NavIndicator = styled.div.attrs<{$current?: boolean, $home: boolean}>(props => props)`
-    width: ${props => props.$home ? "14px" : "7px"};
-    height: ${props => props.$home ? "15px" : "7px"};
-    margin: ${props => props.$home ? 0 : 8}px 8px;
-    ${props => !props.$home && "border-radius: 6px; background-color: " + theme.purple + (props.$current ? "" : "B5")};
-    ${props => props.$home && "color: " + theme.purple + (props.$current ? "" : "B5")}
-
-
-`;
 
 
 interface NavigationProps {
@@ -38,14 +13,26 @@ export const Navigation: React.FC<NavigationProps> = ({current, setCurrent, scre
     const index = screens.indexOf(current);
     return (
         <>
-            <NavContainer>
+            <div className="navContainer">
                 <div>
-                    <NavIndicator onClick={() => setCurrent(screens[(index+2)%3])} $home={screens[(index+2)%3] === "Home"}>{screens[(index+2)%3] === "Home" && <HomeIcon color={theme.purple + "B5"}/>}</NavIndicator>
-                    <NavIndicator $current  $home={current === "Home"}>{current === "Home" && <HomeIcon color={theme.purple}/>}</NavIndicator>
-                    <NavIndicator onClick={() => setCurrent(screens[(index+1)%3])} $home={screens[(index+1)%3] === "Home"}>{screens[(index+1)%3] === "Home" && <HomeIcon color={theme.purple + "B5"}/>}</NavIndicator>
+                    <div 
+                    onClick={() => setCurrent(screens[(index+2)%3])} 
+                    className={screens[(index+2)%3] === "Home" ? "homeIndicator" : "indicator"}
+                    >
+                        {screens[(index+2)%3] === "Home" && <HomeIcon color={theme.purple75}/>}
+                    </div>
+                    <div className={current === "Home" ? "homeIndicator" : "indicator current"}>
+                        {current === "Home" && <HomeIcon color={theme.purple}/>}
+                    </div>
+                    <div 
+                    onClick={() => setCurrent(screens[(index+1)%3])} 
+                    className={screens[(index+1)%3] === "Home" ? "homeIndicator" : "indicator"}
+                    >
+                        {screens[(index+1)%3] === "Home" && <HomeIcon color={theme.purple75}/>}
+                    </div>
                 </div>
                 {current}
-            </NavContainer>
+            </div>
         </>
     )
 }

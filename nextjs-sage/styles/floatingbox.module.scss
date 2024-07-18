@@ -1,0 +1,10 @@
+@use "theme.module" as theme;
+
+
+.floatingbox {
+    
+    background: theme.$light; 
+    border-radius: theme.$radius;
+    box-shadow: theme.$shadow;
+    padding: 10px 20px;
+}

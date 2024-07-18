@@ -1,0 +1,20 @@
+@use 'theme.module' as theme;
+
+.food {
+    width: 70px;
+    margin: 5px;
+    & div {
+        box-shadow: inset 1px 4px 8px 0 theme.$dark+"1F";
+        border-radius: theme.$radius;
+        width: 60px;
+        height: 60px;
+        background-size: cover;
+        margin: auto;
+    };
+    & p {
+        margin: 3px;
+        font-size: 12px;
+        font-weight: lighter;
+        text-align: center;
+    }
+}
