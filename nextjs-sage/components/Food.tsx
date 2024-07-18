@@ -12,8 +12,8 @@ interface FoodProps {
 export const Food: React.FC<FoodProps> = ({food}) => {
 
     return(
-        <div className={styles.food} style={{backgroundImage: `url(${food.Icon})`}}>
-            <div/>
+        <div className={styles.food}>
+            <div style={{backgroundImage: `url(${food.Icon})`}}/>
             <p>{food.Name}</p>
             <p>{food.ServingSize * food.ServingsPerCycle}g</p>
         </div>
