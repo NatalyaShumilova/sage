@@ -1,21 +1,25 @@
 
 $light: #fff;
 $dark: #443D33;
+$dark12: $dark + 1F;
 $green: #89BF8F;
-$green25: #89BF8F33;
+$green25: $green + 33;
 $purple: #BA56F4;
-$purple75: #BA56F4BF;
+$purple75: $purple + BF;
 
 $radius: 5px;
 $shadow: 1px 4px 8px 0 $green25;
+$inset-shadow: inset 1px 4px 8px 0 $dark12;
 
 :export {
     light: $light;
     dark: $dark;
+    dark12: $dark12;
     green: $green;
     green25: $green25;
     purple: $purple;
     purple75: $purple75;
     radius: $radius;
     shadow: $shadow;
+    inset-shadow: $inset-shadow;
 }

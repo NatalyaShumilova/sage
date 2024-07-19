@@ -1,0 +1,6 @@
+@use 'theme.module' as theme;
+
+.scrollable {
+    display: flex;
+    overflow-x: scroll;
+}

@@ -1,12 +1,15 @@
 import styles from '../styles/food.module.scss'
 
+export interface Food
+{
+    Name: string,
+    ServingSize: number,
+    ServingsPerCycle: number,
+    Icon: string
+}
+
 interface FoodProps {
-    food: {
-        Name: string,
-        ServingSize: number,
-        ServingsPerCycle: number,
-        Icon: string
-    }
+    food: Food
 }
 
 export const Food: React.FC<FoodProps> = ({food}) => {

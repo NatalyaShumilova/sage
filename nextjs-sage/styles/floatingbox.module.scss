@@ -2,7 +2,7 @@
 
 
 .floatingbox {
-    
+    max-width: calc( 100vw - 40px );
     background: theme.$light; 
     border-radius: theme.$radius;
     box-shadow: theme.$shadow;

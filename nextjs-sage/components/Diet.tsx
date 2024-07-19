@@ -1,5 +1,5 @@
 import { FloatingBox } from "./FloatingBox";
-import { Food } from "./Food";
+import { FoodGroup } from "./FoodGroup";
 
 interface DietProps {
     identity: any;
@@ -13,9 +13,23 @@ export const Diet: React.FC<DietProps> = ({identity}) => {
             </h1>
         <FloatingBox>
             <h2>Meat</h2>
-            <Food food={{Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2}} />
-            <Food food={{Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2}} />
-
+            <FoodGroup 
+            group={{
+                name: "Fish", 
+                foods: [
+                    {Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2},
+                    {Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2},
+                    {Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2},
+                    {Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2}]}} 
+            />
+            <FoodGroup group={{
+                name: "Fish", 
+                foods: [
+                    {Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2},
+                    {Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2},
+                    {Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2},
+                    {Name: "Salmon", Icon: "/Salmon.png", ServingSize: 200, ServingsPerCycle: 2}]}} 
+                />
         </FloatingBox>
         </div>
     )

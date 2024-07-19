@@ -1,6 +1,6 @@
 @use 'theme.module' as theme;
 
-.food {
+.addFood {
     width: 70px;
     margin: 5px;
     & div {
@@ -9,6 +9,7 @@
         width: 60px;
         height: 60px;
         background-size: cover;
+        background-image: url("/Add.png");
         margin: auto;
     };
     & p {
