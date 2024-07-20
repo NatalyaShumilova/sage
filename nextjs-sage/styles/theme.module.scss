@@ -1,11 +1,13 @@
+@use 'sass:color';
+
 
 $light: #fff;
 $dark: #443D33;
-$dark12: #{$dark}1F;
+$dark12: transparentize($dark, 0.88);
 $green: #89BF8F;
-$green25: #{$green}33;
+$green25: transparentize($green, 0.75);
 $purple: #BA56F4;
-$purple75: #{$purple}BF;
+$purple75: transparentize($purple, 0.25);
 
 $radius: 5px;
 $shadow: 1px 4px 8px 0 $green25;
