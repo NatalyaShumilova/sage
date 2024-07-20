@@ -3,14 +3,13 @@
 .addFood {
     width: 70px;
     margin: 5px;
-    & div {
+    & > div {
         box-shadow: theme.$inset-shadow;
         border-radius: theme.$radius;
         width: 60px;
         height: 60px;
-        background-size: cover;
-        background-image: url("/Add.png");
         margin: auto;
+        padding: 10px;
     };
     & p {
         margin: 3px;
