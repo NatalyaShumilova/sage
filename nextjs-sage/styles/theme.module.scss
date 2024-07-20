@@ -1,11 +1,11 @@
 
 $light: #fff;
 $dark: #443D33;
-$dark12: "#{$dark}1F";
+$dark12: #{$dark}1F;
 $green: #89BF8F;
-$green25: "#{$green}33";
+$green25: #{$green}33;
 $purple: #BA56F4;
-$purple75: "#{$purple}BF";
+$purple75: #{$purple}BF;
 
 $radius: 5px;
 $shadow: 1px 4px 8px 0 $green25;
