@@ -9,26 +9,27 @@ interface NavigationProps {
     setCurrent: (c: string) => void;
     screens: string[];
 }
+
+const getClassName = (s: string, current: string) => {
+    if (s === "Home") {
+        return styles.homeIndicator;
+    }
+    if (s === current) {
+        return styles.indicator + " " + styles.current;
+    }
+    return styles.indicator;
+    
+}
 export const Navigation: React.FC<NavigationProps> = ({current, setCurrent, screens}) => {
-    const index = screens.indexOf(current);
     return (
             <div className={styles.navContainer}>
                 <div>
-                    <div 
-                    onClick={() => setCurrent(screens[(index+2)%3])} 
-                    className={screens[(index+2)%3] === "Home" ? styles.homeIndicator : styles.indicator}
+                    {screens.map(s => <div 
+                    onClick={() => setCurrent(s)} 
+                    className={getClassName(s, current)}
                     >
-                        {screens[(index+2)%3] === "Home" && <HomeIcon color={theme.purple75}/>}
-                    </div>
-                    <div className={current === "Home" ? styles.homeIndicator : (styles.indicator +" "+ styles.current)}>
-                        {current === "Home" && <HomeIcon color={theme.purple}/>}
-                    </div>
-                    <div 
-                    onClick={() => setCurrent(screens[(index+1)%3])} 
-                    className={screens[(index+1)%3] === "Home" ? styles.homeIndicator : styles.indicator}
-                    >
-                        {screens[(index+1)%3] === "Home" && <HomeIcon color={theme.purple75}/>}
-                    </div>
+                        {s === "Home" && <HomeIcon color={s=== current ? theme.purple : theme.purple75}/>}
+                    </div>)}
                 </div>
                 {current}
             </div>

@@ -7,8 +7,8 @@ import {Nutrition} from '../components/Nutrition';
 import useSwipe from '../helpers/useSwipe';
 
 const screens = {
-  Home: (identity) => <Home identity={identity}/>,
   "My Diet": (identity) => <Diet  identity={identity}/>,
+  Home: (identity) => <Home identity={identity}/>,
   "My Nutrition": (identity) => <Nutrition  identity={identity}/>
 }
 async function getUserInfo() {
