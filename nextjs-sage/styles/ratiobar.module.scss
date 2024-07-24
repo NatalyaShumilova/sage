@@ -18,3 +18,21 @@
     color: theme.$dark;
     font-size: 12px;
 }
+
+.indicator-top {
+    width: 0;
+    height: 0;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 7px solid theme.$dark;
+    margin: auto;
+}
+
+.indicator-bottom {
+    width: 0;
+    height: 0;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 7px solid theme.$dark;
+    margin: auto
+}

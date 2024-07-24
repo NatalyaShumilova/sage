@@ -33,9 +33,12 @@ export const RatioBar: React.FC<RatioBarProps> = ({ratio, current}) => {
 
     return (
         <div>
+            <div className={styles.indicator_top} />
             <div className={styles.bar} style={{background: ratio.item2.color}} >
                 <div data-testid="bar" style={{width: getWidth(current, ratio.max, ratio.min), background: ratio.item1.color}}/>
             </div>
+            <div className={styles.indicator_bottom} />
+
             <div className={styles.labels}>
                 <p>{ratio.item1.name}</p>
                 <p>{ratio.item2.name}</p>
