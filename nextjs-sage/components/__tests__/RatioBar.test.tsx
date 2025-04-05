@@ -22,8 +22,6 @@ describe("RatioBar", () => {
         })
 
         await waitFor(() => {});
-        const bar = screen.getByTestId("bar");
-        console.log(expect(bar))
         expect(screen.getByTestId("bar")).toHaveStyle('width: 50%');
     })
     it("returns correct width given ratio below range", async () => {
@@ -32,8 +30,6 @@ describe("RatioBar", () => {
         })
 
         await waitFor(() => {});
-        const bar = screen.getByTestId("bar");
-        console.log(expect(bar))
         expect(screen.getByTestId("bar")).toHaveStyle('width: 25%');
     })
     it("returns correct width given ratio above range", async () => {
@@ -42,8 +38,6 @@ describe("RatioBar", () => {
         })
 
         await waitFor(() => {});
-        const bar = screen.getByTestId("bar");
-        console.log(expect(bar))
         expect(screen.getByTestId("bar")).toHaveStyle('width: 75%');
     })
 })
